@@ -4,7 +4,6 @@ import re
 class Main:
 
     def parce():
-        """Run parcer and get args."""
         parcer = argparse.ArgumentParser(description='Process input')
         parcer.add_argument('-n', type=int, default=4, help='legth of n-gram')
         parcer.add_argument(
@@ -35,6 +34,9 @@ class Main:
         core = TextCore(text)
         core_true_words = core.all_core_words()
         print(core_true_words)
+
+        core_average = core.get_average_essense()
+        core_median = core.get_median_essense()
 
 
 class TextCore:
@@ -69,6 +71,17 @@ class TextCore:
             result = numbers[int(length/2)]
         return result
     
+    def get_average_essense(self) -> tuple[float, float]:
+        averages = re.split(r'\.|!|\?', self.text)
+        averages = list(filter(lambda average: average != '', averages))
+        all_average = [len(average.split()) for average in averages]
+        return TextCore.get_average(all_average)
+
+    def get_median_essense(self) -> tuple[float, float]:
+        medians = re.split(r'\.|!|\?', self.text)
+        medians = list(filter(lambda median: median != '', medians))
+        all_median = [len(median.split()) for median in medians]
+        return TextCore.get_median(all_median)
 
 
 Main.main()
