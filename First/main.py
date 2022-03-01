@@ -30,20 +30,25 @@ class Main:
         return args.filename.read()
 
     def main():
-        text = Main.get_text()
-        core = TextCore(text)
+        k, n = 10, 4
+        core = TextCore(Main.get_text())
         core_true_words = core.all_core_words()
         print(core_true_words)
 
-        core_average = core.get_average_essense()
-        core_median = core.get_median_essense()
+        print("Average count of words")
+        print(f"> {core.get_average_essense()}")
+        print("Median is equal")
+        print(f"> {core.get_median_essense()}")
 
+        print("Full n-grams")
+        repeatable_top_essense = core.repeatable_top(k,n)
+        Main.print_method(repeatable_top_essense)
 
 class TextCore:
     def __init__(self,text:str) ->None:
         self.text = text
 
-    def core_counter(self, items: list) ->dict[any, int]:
+    def core_counter(self, items):
         core = dict()
         for i in items:
             core[i] = core.get(i, 0) + 1
@@ -83,5 +88,15 @@ class TextCore:
         all_median = [len(median.split()) for median in medians]
         return TextCore.get_median(all_median)
 
+    def repeatable_top(self, k: int = 10, n: int = 4) ->dict[str, int]:
+        temp_list = re.split("[^a-zа-я]", self.text.lower())
+        temp_list = list(filter(lambda w: len(w) >= n, temp_list))
+        ngrams = list()
+        for w in temp_list:
+            ngrams_in_word = list(zip(*[w[i:] for i in range(n)]))
+            for j in ngrams_in_word:
+                ngrams.append(''.join(j))
+        ngrams_count = self.core_counter(ngrams)
+        return dict(list(ngrams_count.items())[:k])
 
 Main.main()
