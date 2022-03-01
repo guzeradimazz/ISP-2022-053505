@@ -59,36 +59,40 @@ class TextCore:
         core = dict(true_items)
         return core
 
-    def all_core_words(self) ->dict[str, int]:
+    def all_core_words(self):
         words = re.split("[^a-zа-я']", self.text.lower())
         words = list(filter(lambda word: word != '', words))
         return self.core_counter(words)
     
-    def get_average(numbers :list[int]) ->int:
-        return sum(numbers)/len(numbers)
+    def get_average(numbers):
+        if numbers:
+            return sum(numbers)/len(numbers)
+        else: return 0
 
-    def get_median(numbers: list[int]) ->int:
-        length = len(numbers)
-        if(length & 1 == 0):
-            result = numbers[int(length/2)]+numbers[int(length/2)+1]
-            result /= 2
-        else:
-            result = numbers[int(length/2)]
-        return result
+    def get_median(numbers):
+        if numbers:
+            length = len(numbers)
+            if(length & 1 == 0):
+                result = numbers[int(length/2)]+numbers[int(length/2)+1]
+                result /= 2
+            else:
+                result = numbers[int(length/2)]
+            return result
+        else: return 0
     
-    def get_average_essense(self) -> tuple[float, float]:
+    def get_average_essense(self):
         averages = re.split(r'\.|!|\?', self.text)
         averages = list(filter(lambda average: average != '', averages))
         all_average = [len(average.split()) for average in averages]
         return TextCore.get_average(all_average)
 
-    def get_median_essense(self) -> tuple[float, float]:
+    def get_median_essense(self):
         medians = re.split(r'\.|!|\?', self.text)
         medians = list(filter(lambda median: median != '', medians))
         all_median = [len(median.split()) for median in medians]
         return TextCore.get_median(all_median)
 
-    def repeatable_top(self, k: int = 10, n: int = 4) ->dict[str, int]:
+    def repeatable_top(self, k: int = 10, n: int = 4):
         temp_list = re.split("[^a-zа-я]", self.text.lower())
         temp_list = list(filter(lambda w: len(w) >= n, temp_list))
         ngrams = list()
@@ -98,5 +102,6 @@ class TextCore:
                 ngrams.append(''.join(j))
         ngrams_count = self.core_counter(ngrams)
         return dict(list(ngrams_count.items())[:k])
-
+#todo checkup ifelse lenght
+#checkup - ,
 Main.main()
