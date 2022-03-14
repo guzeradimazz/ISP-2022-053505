@@ -102,6 +102,5 @@ class TextCore:
                 ngrams.append(''.join(j))
         ngrams_count = self.core_counter(ngrams)
         return dict(list(ngrams_count.items())[:k])
-#todo checkup ifelse lenght
-#checkup - ,
+
 Main.main()
