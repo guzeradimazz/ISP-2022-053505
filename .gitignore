@@ -1,8 +1,10 @@
 # second test lab
 second
+Second
 
 
 #trash
 __pycache__
 .vscode
 first
+.DS_Store
