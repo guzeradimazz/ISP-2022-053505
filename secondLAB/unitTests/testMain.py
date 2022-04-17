@@ -1,4 +1,3 @@
-from typing import Type
 import unittest
 from main import main
 
