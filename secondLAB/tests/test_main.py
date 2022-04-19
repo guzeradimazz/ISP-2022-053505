@@ -1,5 +1,6 @@
-from factory import JsonSerializerFabric,YamlSerializerFabric,TomlSerializerFabric
 
+from distutils.log import error
+from factory import JsonSerializerFabric,YamlSerializerFabric,TomlSerializerFabric
 
 class Animal:
     def __init__(self, color='red', weight=100):
@@ -9,22 +10,9 @@ class Animal:
     color: str
     weight:int
 
-    animalTuple = tuple('animal tuple by letter')
+def test_menu():
 
-    animalList = ['a','r','r','a','y',' ','i','n',' ','J','S']
-
-    animalDict = {
-        "This": "Is",
-        "Object": "In",
-        "JavaScript": 228
-    }
-
-    animalLambda = lambda x:x*5
-
-    def multipleWeight(self): return 5*self.weight
-
-def main():
-    menu = input()
+    menu = '2'
     entity = Animal('brown',200)
 
     if(menu == '1'):
@@ -40,5 +28,3 @@ def main():
         parser.dump(entity,'./utils/entity.toml')
         parser.load('./utils/entity.toml')
     else: raise Exception('Invalid menu')
-    
-main()
