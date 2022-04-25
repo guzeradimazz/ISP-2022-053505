@@ -40,6 +40,15 @@ def main():
         parser = TomlSerializerFabric.createSerializer()
         parser.dump(entity,'./utils/entity.toml')
         parser.load('./utils/entity.toml')
+    elif(menu == '4'):
+        parser = JsonSerializerFabric.createSerializer()
+        temp = parser.load('./utils/entity.json')
+        print(temp)
+    elif(menu == '5'):
+        parser = JsonSerializerFabric.createSerializer()
+        parser2 = YamlSerializerFabric.createSerializer()
+        temp = parser.load('./utils/entity.json')
+        if(temp): parser2.dump(temp,'./utils/entity.yaml')
     else: raise Exception('Invalid menu')
 
 main()

@@ -143,44 +143,6 @@
                             }
                         }
                     },
-                    "c": 42,
-                    "f": {
-                        "func": {
-                            "code": {
-                                "co_argcount": 1,
-                                "co_cellvars": { "tuple": {} },
-                                "co_code": {
-                                    "bytes": "64017d017400a0017c007c01140074021400a1015300"
-                                },
-                                "co_consts": {
-                                    "tuple": { "el0": null, "el1": 123 }
-                                },
-                                "co_filename": "/Users/dimaguzercuk/Desktop/ISP-LABS/secondLAB/main.py",
-                                "co_firstlineno": 27,
-                                "co_flags": 67,
-                                "co_freevars": { "tuple": {} },
-                                "co_kwonlyargcount": 0,
-                                "co_lines": null,
-                                "co_linetable": { "bytes": "04011201" },
-                                "co_lnotab": { "bytes": "00010401" },
-                                "co_name": "f",
-                                "co_names": {
-                                    "tuple": {
-                                        "el0": "math",
-                                        "el1": "sin",
-                                        "el2": "c"
-                                    }
-                                },
-                                "co_nlocals": 2,
-                                "co_posonlyargcount": 0,
-                                "co_stacksize": 4,
-                                "co_varnames": {
-                                    "tuple": { "el0": "x", "el1": "a" }
-                                },
-                                "replace": null
-                            }
-                        }
-                    },
                     "__dict__": null,
                     "__weakref__": null,
                     "__doc__": null

@@ -1,17 +1,22 @@
 from parsers.parserParent import Serializer
 import parsers.serializerCore as core
+# import yaml
 
 class YamlSerializer(Serializer):
 
+    # def dumps(self, item):
+    #     return yaml.dump(core.serialize(item,Dumper=yaml.CDumper))
+    # def loads(self, string):
+    #     return core.deserialize(yaml.load(string,Loader=yaml.CLoader))
     def dumps(self, item):
         def toString(item, depth=0):
             if isinstance(item, dict):
                 strings = list()
-                prefix = '  '*depth
+                prefix = '    '*depth
 
                 if (False or isinstance(value, dict)
                         for value in item.values()):
-                    prefix = '\n' + prefix
+                            if(depth != 0): prefix = '\n' + prefix
                 for key, value in item.items():
                     strings.append(
                         f'{prefix}{toString(key)}: {toString(value, depth+1)}')

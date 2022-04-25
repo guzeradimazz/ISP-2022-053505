@@ -11,7 +11,7 @@ __doc__ = []
 [object.obj_type.type.attribs.__init__.func.code]
 co_argcount = 3
 co_filename = '/Users/dimaguzercuk/Desktop/ISP-LABS/secondLAB/main.py'
-co_firstlineno = 6
+co_firstlineno = 5
 co_flags = 67
 co_kwonlyargcount = 0
 co_lines = []
@@ -91,7 +91,7 @@ JavaScript = 228
 [object.obj_type.type.attribs.animalLambda.func.code]
 co_argcount = 1
 co_filename = '/Users/dimaguzercuk/Desktop/ISP-LABS/secondLAB/main.py'
-co_firstlineno = 23
+co_firstlineno = 22
 co_flags = 67
 co_kwonlyargcount = 0
 co_lines = []
@@ -126,7 +126,7 @@ el0 = 'x'
 [object.obj_type.type.attribs.multipleWeight.func.code]
 co_argcount = 1
 co_filename = '/Users/dimaguzercuk/Desktop/ISP-LABS/secondLAB/main.py'
-co_firstlineno = 25
+co_firstlineno = 24
 co_flags = 67
 co_kwonlyargcount = 0
 co_lines = []
