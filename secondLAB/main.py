@@ -1,5 +1,4 @@
 from factory import JsonSerializerFabric,YamlSerializerFabric,TomlSerializerFabric
-import math
 
 class Animal:
     def __init__(self, color='red', weight=100):
@@ -22,7 +21,6 @@ class Animal:
     animalLambda = lambda x:x*5
 
     def multipleWeight(self): return 5*self.weight
-
 
 def main():
     menu = input()

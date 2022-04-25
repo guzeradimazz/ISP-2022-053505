@@ -1,159 +1,50 @@
 object: 
-      obj_type: 
-            type: 
-                  name: Animal
-                  attribs: 
-                        __module__: __main__
-                        __annotations__: 
-                        __init__: 
-                              func: 
-                                    code: 
-                                          co_argcount: 3
-                                          co_cellvars: 
-                                                tuple: 
-                                          co_code: 
-                                                bytes: 7c017c005f007c027c005f0164005300
-                                          co_consts: 
-                                                tuple: 
-                                                      el0: 
-                                          co_filename: /Users/dimaguzercuk/Desktop/ISP-LABS/secondLAB/main.py
-                                          co_firstlineno: 5
-                                          co_flags: 67
-                                          co_freevars: 
-                                                tuple: 
-                                          co_kwonlyargcount: 0
-                                          co_lines: 
-                                          co_linetable: 
-                                                bytes: 06010a01
-                                          co_lnotab: 
-                                                bytes: 00010601
-                                          co_name: __init__
-                                          co_names: 
-                                                tuple: 
-                                                      el0: color
-                                                      el1: weight
-                                          co_nlocals: 3
-                                          co_posonlyargcount: 0
-                                          co_stacksize: 2
-                                          co_varnames: 
-                                                tuple: 
-                                                      el0: self
-                                                      el1: color
-                                                      el2: weight
-                                          replace: 
-                        animalTuple: 
-                              tuple: 
-                                    el0: a
-                                    el1: n
-                                    el2: i
-                                    el3: m
-                                    el4: a
-                                    el5: l
-                                    el6:  
-                                    el7: t
-                                    el8: u
-                                    el9: p
-                                    el10: l
-                                    el11: e
-                                    el12:  
-                                    el13: b
-                                    el14: y
-                                    el15:  
-                                    el16: l
-                                    el17: e
-                                    el18: t
-                                    el19: t
-                                    el20: e
-                                    el21: r
-                        animalList: 
-                              list: 
-                                    el0: a
-                                    el1: r
-                                    el2: r
-                                    el3: a
-                                    el4: y
-                                    el5:  
-                                    el6: i
-                                    el7: n
-                                    el8:  
-                                    el9: J
-                                    el10: S
-                        animalDict: 
-                              dict: 
-                                    This: Is
-                                    Object: In
-                                    JavaScript: 228
-                        animalLambda: 
-                              func: 
-                                    code: 
-                                          co_argcount: 1
-                                          co_cellvars: 
-                                                tuple: 
-                                          co_code: 
-                                                bytes: 7c00640114005300
-                                          co_consts: 
-                                                tuple: 
-                                                      el0: 
-                                                      el1: 5
-                                          co_filename: /Users/dimaguzercuk/Desktop/ISP-LABS/secondLAB/main.py
-                                          co_firstlineno: 22
-                                          co_flags: 67
-                                          co_freevars: 
-                                                tuple: 
-                                          co_kwonlyargcount: 0
-                                          co_lines: 
-                                          co_linetable: 
-                                                bytes: 0800
-                                          co_lnotab: 
-                                                bytes: 
-                                          co_name: <lambda>
-                                          co_names: 
-                                                tuple: 
-                                          co_nlocals: 1
-                                          co_posonlyargcount: 0
-                                          co_stacksize: 2
-                                          co_varnames: 
-                                                tuple: 
-                                                      el0: x
-                                          replace: 
-                        multipleWeight: 
-                              func: 
-                                    code: 
-                                          co_argcount: 1
-                                          co_cellvars: 
-                                                tuple: 
-                                          co_code: 
-                                                bytes: 64017c006a0014005300
-                                          co_consts: 
-                                                tuple: 
-                                                      el0: 
-                                                      el1: 5
-                                          co_filename: /Users/dimaguzercuk/Desktop/ISP-LABS/secondLAB/main.py
-                                          co_firstlineno: 24
-                                          co_flags: 67
-                                          co_freevars: 
-                                                tuple: 
-                                          co_kwonlyargcount: 0
-                                          co_lines: 
-                                          co_linetable: 
-                                                bytes: 0a00
-                                          co_lnotab: 
-                                                bytes: 
-                                          co_name: multipleWeight
-                                          co_names: 
-                                                tuple: 
-                                                      el0: weight
-                                          co_nlocals: 1
-                                          co_posonlyargcount: 0
-                                          co_stacksize: 2
-                                          co_varnames: 
-                                                tuple: 
-                                                      el0: self
-                                          replace: 
-                        __dict__: 
-                        __weakref__: 
-                        __doc__: 
-      obj_dict: 
-            dict: 
-                  color: brown
-                  weight: 200
+    obj_type: 
+        type: 
+            name: Animal
+            attribs: 
+                __module__: tests.test_main
+                __annotations__: 
+                __init__: 
+                    func: 
+                        code: 
+                            co_argcount: 3
+                            co_cellvars: 
+                                tuple: 
+                            co_code: 
+                                bytes: 7c017c005f007c027c005f0164005300
+                            co_consts: 
+                                tuple: 
+                                    el0: 
+                            co_filename: /Users/dimaguzercuk/Desktop/ISP-LABS/secondLAB/tests/test_main.py
+                            co_firstlineno: 6
+                            co_flags: 67
+                            co_freevars: 
+                                tuple: 
+                            co_kwonlyargcount: 0
+                            co_lines: 
+                            co_linetable: 
+                                bytes: 06010a01
+                            co_lnotab: 
+                                bytes: 00010601
+                            co_name: __init__
+                            co_names: 
+                                tuple: 
+                                    el0: color
+                                    el1: weight
+                            co_nlocals: 3
+                            co_posonlyargcount: 0
+                            co_stacksize: 2
+                            co_varnames: 
+                                tuple: 
+                                    el0: self
+                                    el1: color
+                                    el2: weight
+                            replace: 
+                __dict__: 
+                __weakref__: 
+                __doc__: 
+    obj_dict: 
+        dict: 
+            color: brown
+            weight: 200

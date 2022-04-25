@@ -1,9 +1,8 @@
 from types import MappingProxyType
-from parsers.jsonSerializer import JsonSerializer
+from parsers.json_serializer import JsonSerializer
 import math
 
-def div(a, b):
-    return a / b
+def div(a, b): return a / b
 
 c = 42
 def f(x):

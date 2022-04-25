@@ -1,10 +1,8 @@
 class Serializer:
 
-    def dumps(self, item):
-        pass
+    def dumps(self, item): pass
 
-    def loads(self, string):
-        pass
+    def loads(self, string): pass
 
     def dump(self, item, filename):
         file = open(filename, 'w')

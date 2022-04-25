@@ -1,13 +1,8 @@
-from parsers.parserParent import Serializer
-import parsers.serializerCore as core
-# import yaml
+from parsers.parser_parent import Serializer
+import parsers.serializer_core as core
 
 class YamlSerializer(Serializer):
 
-    # def dumps(self, item):
-    #     return yaml.dump(core.serialize(item,Dumper=yaml.CDumper))
-    # def loads(self, string):
-    #     return core.deserialize(yaml.load(string,Loader=yaml.CLoader))
     def dumps(self, item):
         def toString(item, depth=0):
             if isinstance(item, dict):

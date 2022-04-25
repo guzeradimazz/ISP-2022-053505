@@ -1,11 +1,11 @@
-from parsers import jsonSerializer,yamlSerializer,tomlSerializer
+from parsers import json_Serializer,yamlSerializer,tomlSerializer
 
 
 class SerializerFabric:
     def createSerializer(): pass
 
 class JsonSerializerFabric(SerializerFabric):
-    def createSerializer(): return jsonSerializer.JsonSerializer()
+    def createSerializer(): return json_Serializer.JsonSerializer()
 
 class YamlSerializerFabric(SerializerFabric):
     def createSerializer(): return yamlSerializer.YamlSerializer()

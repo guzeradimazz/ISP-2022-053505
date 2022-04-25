@@ -1,6 +1,6 @@
 import qtoml
-import parsers.serializerCore as core
-from parsers.parserParent import Serializer
+import parsers.serializer_core as core
+from parsers.parser_parent import Serializer
 
 class TomlSerializer(Serializer):
 
