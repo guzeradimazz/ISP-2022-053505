@@ -4,7 +4,7 @@ import parsers.serializer_core as core
 class YamlSerializer(Serializer):
 
     def dumps(self, item):
-        def toString(item, depth=0):
+        def to_String(item, depth=0):
             if isinstance(item, dict):
                 strings = list()
                 prefix = '    '*depth
@@ -14,7 +14,7 @@ class YamlSerializer(Serializer):
                             if(depth != 0): prefix = '\n' + prefix
                 for key, value in item.items():
                     strings.append(
-                        f'{prefix}{toString(key)}: {toString(value, depth+1)}')
+                        f'{prefix}{to_String(key)}: {to_String(value, depth+1)}')
                 return ''.join(strings)
             elif isinstance(item, str):
                 s = item.translate(str.maketrans({
@@ -23,12 +23,11 @@ class YamlSerializer(Serializer):
                 }))
                 return s
             elif item is None:return ''
-            else:return str(item)
-
-        return toString(core.serialize(item))
+            else: return str(item)
+        return to_String(core.serialize(item))
 
     def loads(self, string):
-        def getSerValue(key, sval):
+        def get_ser_value(key, sval):
             temp = sval
             if not key.endswith('bytes'):
                 try:
@@ -53,7 +52,7 @@ class YamlSerializer(Serializer):
             keys = [key.partition(':')[0] for key in keys]
             dvals = ['\n'.join([s[2:] for s in e]) for e in dvals]
             for i in range(len(keys)):
-                if len(dvals[i]) == 0: temp = temp | {keys[i]: getSerValue(keys[i], svals[i])}
+                if len(dvals[i]) == 0: temp = temp | {keys[i]: get_ser_value(keys[i], svals[i])}
                 else: temp = temp | {keys[i]: iter(dvals[i])}
             return temp
 
