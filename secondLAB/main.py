@@ -1,5 +1,5 @@
 from factory import JsonSerializerFabric,YamlSerializerFabric,TomlSerializerFabric
-
+import math
 
 class Animal:
     def __init__(self, color='red', weight=100):
@@ -23,6 +23,7 @@ class Animal:
 
     def multipleWeight(self): return 5*self.weight
 
+
 def main():
     menu = input()
     entity = Animal('brown',200)
@@ -40,5 +41,5 @@ def main():
         parser.dump(entity,'./utils/entity.toml')
         parser.load('./utils/entity.toml')
     else: raise Exception('Invalid menu')
-    
+
 main()
